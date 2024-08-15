@@ -28,7 +28,6 @@ const game = useGame(
   }))
 )
 const card = game.currentCard
-const flashCards = game.flashCards
 const stats = game.stats
 
 function reset() {

@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { watch, ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 import { factories } from '@/di'
 import type { Card } from '@/data/card'
 import type { Deck } from '@/data/deck'
-import { watch } from 'vue'
 
 const props = defineProps({
   id: String
