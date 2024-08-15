@@ -1,0 +1,13 @@
+@import url('https://unpkg.com/css.gg/icons/icons.css');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font:
+    100%/1.4 Inter,
+    sans-serif;
+}

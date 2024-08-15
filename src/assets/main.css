@@ -1,0 +1,74 @@
+@import './base.css';
+
+.container {
+  width: min(100% - var(--container-gap, 4em), var(--container-size, 100%));
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow, 1em);
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.line {
+  --line-gap: 1em;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--line-gap, 1em);
+}
+
+.pillar {
+  display: grid;
+  gap: var(--pillar-gap, 1em);
+}
+
+.button {
+  --button-font-size: 0.9;
+  --button-background: hsl(216, 87%, 55%);
+  --button-foreground: hsl(0, 0%, 100%);
+  --ggs: var(--button-font-size);
+
+  display: inline-block;
+  background-color: var(--button-background);
+  border: 0;
+  border-radius: 0.25em;
+  color: var(--button-foreground);
+  font-size: calc(var(--button-font-size) * 1em);
+  cursor: pointer;
+  padding: 1em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &[data-size='small'] {
+    --button-font-size: 0.75;
+  }
+
+  &[data-variant='danger'] {
+    --button-background: hsl(0, 75%, 52%);
+    --button-foreground: hsl(0, 0%, 100%);
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
